@@ -74,7 +74,7 @@ to check if there are any listeners at all.
 Example:
 
 ```php
-$e = new \RuntimeException('Everything is broken!');
+$e = new RuntimeException('Everything is broken!');
 if (0 === count($emitter->listeners('error'))) {
     throw $e;
 }

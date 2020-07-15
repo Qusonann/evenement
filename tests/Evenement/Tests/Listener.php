@@ -19,7 +19,7 @@ class Listener
 
     private static $staticData = [];
 
-    public function onFoo($data)
+    public function onFoo($data): void
     {
         $this->data[] = $data;
     }
@@ -29,22 +29,22 @@ class Listener
         $this->magicData[] = $data;
     }
 
-    public static function onBar($data)
+    public static function onBar($data): void
     {
         self::$staticData[] = $data;
     }
 
-    public function getData()
+    public function getData(): array
     {
         return $this->data;
     }
 
-    public function getMagicData()
+    public function getMagicData(): array
     {
         return $this->magicData;
     }
 
-    public static function getStaticData()
+    public static function getStaticData(): array
     {
         return self::$staticData;
     }

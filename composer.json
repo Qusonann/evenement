@@ -10,10 +10,11 @@
         }
     ],
     "require": {
-        "php": ">=7.0"
+        "php": ">=7.1",
+      "ext-json": "*"
     },
     "require-dev": {
-        "phpunit/phpunit": "^6.0"
+        "phpunit/phpunit": "^9.0"
     },
     "autoload": {
         "psr-0": {

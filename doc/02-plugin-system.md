@@ -38,7 +38,7 @@ emitter. For example:
 ```php
 class FooPlugin implements PluginInterface
 {
-    public function attachEvents(EventEmitterInterface $emitter)
+    public function attachEvents(EventEmitterInterface $emitter): void
     {
         $emitter->on('foo', function () {
             echo 'bar!';
@@ -127,7 +127,7 @@ The `markdown` function represents a markdown to HTML converter.
 ```php
 class MarkdownPlugin implements PluginInterface
 {
-    public function attachEvents(EventEmitterInterface $emitter)
+    public function attachEvents(EventEmitterInterface $emitter): void
     {
         $emitter->on('post.create', function (PostEvent $event) {
             $event->post['format'] = 'markdown';
